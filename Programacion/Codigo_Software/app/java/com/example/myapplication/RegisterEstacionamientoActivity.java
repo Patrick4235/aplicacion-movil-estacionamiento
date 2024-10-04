@@ -81,7 +81,7 @@ public class RegisterEstacionamientoActivity extends AppCompatActivity {
 
                     RegisterEstacionamientoActivity.this.finish();
 
-                    Intent pantallaMain = new Intent(RegisterEstacionamientoActivity.this, MainActivity.class);
+                    Intent pantallaMain = new Intent(RegisterEstacionamientoActivity.this, MainActivity2.class);
                     startActivity(pantallaMain);
 
                     Toast.makeText(RegisterEstacionamientoActivity.this,"Datos del estacionamiento registrado",Toast.LENGTH_LONG).show();

@@ -30,7 +30,6 @@ import com.google.cloud.dialogflow.v2.SessionsClient;
 import com.google.cloud.dialogflow.v2.SessionsSettings;
 import com.google.cloud.dialogflow.v2.TextInput;
 import com.google.common.collect.Lists;
-import com.google.rpc.context.AttributeContext;
 
 public class SearchActivity extends AppCompatActivity {
 
@@ -146,7 +145,7 @@ public class SearchActivity extends AppCompatActivity {
 
     public void solicitud(String intentName){
         if(intentName.equals("FindParking")){
-            Intent pantallaMain = new Intent(SearchActivity.this, MainActivity.class);
+            Intent pantallaMain = new Intent(SearchActivity.this, MainActivity2.class);
             startActivity(pantallaMain);
         }else if(intentName.equals("Registro")){
             Intent pantallaRegistro = new Intent(SearchActivity.this, RegisterActivity.class);

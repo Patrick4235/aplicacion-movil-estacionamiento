@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">MapProject</string>
+    <string name="title_register">Registro</string>
+    <string name="title_map">Mapa</string>
+    <string name="title_login">Iniciar Sesion</string>
+    <string name="title_name">Nombre</string>
+    <string name="title_mail">Correo</string>
+    <string name="title_password">Contraseña</string>
+    <string name="title_chatbot">Chatbot</string>
+    <string name="title_repeat_password">Repetir Contraseña</string>
+    <string name="title_register_parking">Registrar Estacionamiento</string>
+    <string name="title_activity_main2">MainActivity2</string>
+    <string name="title_activity_main">MainActivity</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

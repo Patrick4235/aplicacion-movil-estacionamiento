@@ -22,7 +22,6 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
-import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -36,7 +35,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.ValueEventListener;
 
-public class MainActivity extends AppCompatActivity implements OnMapReadyCallback, GoogleMap.OnMyLocationClickListener {
+public class MainActivity2 extends AppCompatActivity implements OnMapReadyCallback, GoogleMap.OnMyLocationClickListener {
 
 
     private GoogleMap mMap;
@@ -56,7 +55,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
 
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main_baclup);
 
         Button chatbot = (Button) findViewById(R.id.btnChatbot);
         bienvenida = (TextView) findViewById(R.id.txtBienvenida);
@@ -96,8 +95,8 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         pantallaLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent pantallaLogueo = new Intent(MainActivity.this, LoginActivity.class);
-                //Toast.makeText(MainActivity.this, latitud + " " + longitud, Toast.LENGTH_LONG).show();
+                Intent pantallaLogueo = new Intent(MainActivity2.this, LoginActivity.class);
+                //Toast.makeText(MainActivity2.this, latitud + " " + longitud, Toast.LENGTH_LONG).show();
                 startActivity(pantallaLogueo);
             }
         });
@@ -105,7 +104,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         pantallaRegistrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent pantallaRegistro = new Intent(MainActivity.this, RegisterActivity.class);
+                Intent pantallaRegistro = new Intent(MainActivity2.this, RegisterActivity.class);
                 startActivity(pantallaRegistro);
 
             }
@@ -115,11 +114,11 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
             @Override
             public void onClick(View v) {
                 if (!nombreUsuario.isEmpty()){
-                    Intent pantallaRegistroEstacionamiento = new Intent(MainActivity.this, RegisterEstacionamientoActivity.class);
+                    Intent pantallaRegistroEstacionamiento = new Intent(MainActivity2.this, RegisterEstacionamientoActivity.class);
                     startActivity(pantallaRegistroEstacionamiento);
                 }
                 else {
-                    Toast.makeText(MainActivity.this,"Debe iniciar sesion para agregar un estacionamiento", Toast.LENGTH_LONG).show();
+                    Toast.makeText(MainActivity2.this,"Debe iniciar sesion para agregar un estacionamiento", Toast.LENGTH_LONG).show();
                 }
             }
         });
@@ -128,8 +127,8 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
             @Override
             public void onClick(View v) {
                 preferencias.edit().clear().apply();
-                MainActivity.this.finish();
-                Intent pantallaMain = new Intent(MainActivity.this, MainActivity.class);
+                MainActivity2.this.finish();
+                Intent pantallaMain = new Intent(MainActivity2.this, MainActivity2.class);
                 startActivity(pantallaMain);
             }
         });
@@ -137,7 +136,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         chatbot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent searchPantalla = new Intent(MainActivity.this, SearchActivity.class);
+                Intent searchPantalla = new Intent(MainActivity2.this, SearchActivity.class);
                 startActivity(searchPantalla);
             }
         });
@@ -214,7 +213,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                     Log.d("Myactivy2", String.valueOf(("LA LATITUD: "+latitud)));
 
                 }catch (NullPointerException e){
-                    Toast.makeText(MainActivity.this, "No se obtuvo longitud ni latitud", Toast.LENGTH_LONG).show();
+                    Toast.makeText(MainActivity2.this, "No se obtuvo longitud ni latitud", Toast.LENGTH_LONG).show();
                 }
             }
         };
@@ -238,7 +237,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
             if(grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED){
                 enableMyLocation();
             }else{
-                Toast.makeText(MainActivity.this, "GPS no permitido, debe activar su GPS",Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity2.this, "GPS no permitido, debe activar su GPS",Toast.LENGTH_LONG).show();
             }
         }
     }

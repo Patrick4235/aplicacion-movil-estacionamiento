@@ -62,7 +62,7 @@ public class RegisterActivity extends AppCompatActivity {
                         myRef.child(correoIngresado).setValue(persona);
 
                         RegisterActivity.this.finish();
-                        Intent pantallaMain = new Intent(RegisterActivity.this, MainActivity.class);
+                        Intent pantallaMain = new Intent(RegisterActivity.this, MainActivity2.class);
                         startActivity(pantallaMain);
 
                         Toast.makeText(RegisterActivity.this,"Datos del usuario registrado",Toast.LENGTH_LONG).show();
