@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "254852148208",
+    "firebase_url": "https://pedidos-ac479-default-rtdb.firebaseio.com",
+    "project_id": "pedidos-ac479",
+    "storage_bucket": "pedidos-ac479.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:254852148208:android:a3d2ecc2517c451c968b35",
+        "android_client_info": {
+          "package_name": "com.example.MapProject"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAh5dgHCBnEuFwhRrcKS2c0AWJSKU1jzVw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
