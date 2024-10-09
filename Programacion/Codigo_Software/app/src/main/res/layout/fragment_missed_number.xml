@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MissedNumberFragment">
+
+    <TextView
+        android:id="@+id/txtExerciseNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:text="@string/numero_ejercicio"
+        android:textColor="@color/colorBlue"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtExercise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:letterSpacing="0.5"
+        android:text="@string/exercise"
+        android:textColor="@color/colorBlack"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtExerciseNumber" />
+
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:columnCount="3"
+        android:padding="16dp"
+        android:rowCount="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtExercise">
+
+        <Button
+            android:id="@+id/btnAnswer1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            tools:text="123" />
+
+        <Button
+            android:id="@+id/btnAnswer2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            tools:text="123" />
+
+        <Button
+            android:id="@+id/btnAnswer3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            tools:text="123" />
+
+        <Button
+            android:id="@+id/btnAnswer4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            tools:text="123" />
+
+        <Button
+            android:id="@+id/btnAnswer5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            tools:text="123" />
+
+        <Button
+            android:id="@+id/btnAnswer6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            tools:text="123" />
+
+    </GridLayout>
+
+    <Button
+        android:id="@+id/btnNextExercise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/rounded_button_siguiente"
+        android:text="@string/next_exercise"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridLayout" />
+
+    <ImageView
+        android:id="@+id/ivImagenCorrecto"
+        android:layout_width="16dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="88dp"
+        android:layout_marginTop="20dp"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnNextExercise"
+        app:srcCompat="@drawable/correcto" />
+
+    <TextView
+        android:id="@+id/txtCorrectAnswersCounter"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="88dp"
+        android:text="@string/number_zero"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivImagenCorrecto" />
+
+    <ImageView
+        android:id="@+id/ivImagenIncorrecto"
+        android:layout_width="16dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="88dp"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnNextExercise"
+        app:srcCompat="@drawable/incorrecto" />
+
+    <TextView
+        android:id="@+id/txtIncorrectAnswersCounter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="88dp"
+        android:gravity="center"
+        android:text="@string/number_zero"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivImagenIncorrecto" />
+
+
+    <!--<Button
+        android:id="@+id/btnCheckAnswer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/rounded_button_siguiente"
+        android:onClick="checkAnswer"
+        android:text="@string/check_answer"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtExercise" />
+
+    <Button
+        android:id="@+id/btnNextExercise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/rounded_button_siguiente"
+        android:onClick="nextExercise"
+        android:text="@string/next_exercise"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtExercise" />
+
+    <ImageView
+        android:id="@+id/ivImagenCorrecto"
+        android:layout_width="16dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="88dp"
+        android:layout_marginTop="20dp"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnNextExercise"
+        app:srcCompat="@drawable/correcto" />
+
+    <TextView
+        android:id="@+id/txtCorrectAnswersCounter"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="88dp"
+        android:text="@string/number_zero"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivImagenCorrecto" />
+
+    <ImageView
+        android:id="@+id/ivImagenIncorrecto"
+        android:layout_width="16dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="88dp"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnNextExercise"
+        app:srcCompat="@drawable/incorrecto" />
+
+    <TextView
+        android:id="@+id/txtIncorrectAnswersCounter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="88dp"
+        android:gravity="center"
+        android:text="@string/number_zero"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivImagenIncorrecto" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

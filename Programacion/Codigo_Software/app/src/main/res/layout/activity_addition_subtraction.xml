@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Addition_SubtractionActivity">
+
+    <TextView
+        android:id="@+id/txtExerciseNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:text="@string/numero_ejercicio"
+        android:textColor="@color/colorBlue"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtNumber1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="@string/number"
+        android:textColor="@color/colorBlack"
+        android:textSize="20sp"
+        android:letterSpacing="0.5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtExerciseNumber" />
+
+    <TextView
+        android:id="@+id/txtNumber2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/number"
+        android:textColor="@color/colorBlack"
+        android:textSize="20sp"
+        android:letterSpacing="0.5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNumber1" />
+
+
+    <View
+        android:id="@+id/vLine"
+        android:layout_width="100dp"
+        android:layout_height="2dp"
+        android:background="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtNumber2" />
+
+    <TextView
+        android:id="@+id/txtMathematicalSymbol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="44dp"
+        android:letterSpacing="0.5"
+        android:text="@string/mathematical_symbol"
+        android:textColor="@color/colorBlack"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/txtNumber1"
+        app:layout_constraintTop_toBottomOf="@id/txtExerciseNumber" />
+
+    <EditText
+        android:id="@+id/etAnswer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="160dp"
+        android:gravity="end"
+        android:inputType="numberDecimal|numberSigned"
+        android:letterSpacing="0.7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vLine" />
+
+    <TextView
+        android:id="@+id/txtCorrectAnswer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        tools:text="@string/correct_answer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etAnswer" />
+
+    <Button
+        android:id="@+id/btnCheckAnswer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/rounded_button_siguiente"
+        android:onClick="checkAnswer"
+        android:text="@string/check_answer"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtCorrectAnswer" />
+
+    <Button
+        android:id="@+id/btnNextExercise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/rounded_button_siguiente"
+        android:onClick="nextExercise"
+        android:text="@string/next_exercise"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtCorrectAnswer" />
+
+    <ImageView
+        android:id="@+id/ivImagenCorrecto"
+        android:layout_width="16dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="88dp"
+        android:layout_marginTop="20dp"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnNextExercise"
+        app:srcCompat="@drawable/correcto" />
+
+    <TextView
+        android:id="@+id/txtCorrectAnswersCounter"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="88dp"
+        android:text="@string/number_zero"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivImagenCorrecto" />
+
+    <ImageView
+        android:id="@+id/ivImagenIncorrecto"
+        android:layout_width="16dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="88dp"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnNextExercise"
+        app:srcCompat="@drawable/incorrecto" />
+
+    <TextView
+        android:id="@+id/txtIncorrectAnswersCounter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="88dp"
+        android:gravity="center"
+        android:text="@string/number_zero"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivImagenIncorrecto" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

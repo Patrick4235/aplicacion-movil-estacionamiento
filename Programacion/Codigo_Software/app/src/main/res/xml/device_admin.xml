@@ -1,0 +1,6 @@
+<device-admin xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-policies>
+        <policy android:name="android.app.deviceadmin:force-lock" />
+        <policy android:name="android.app.deviceadmin:reset-password" />
+    </uses-policies>
+</device-admin>

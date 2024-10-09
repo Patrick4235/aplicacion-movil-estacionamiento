@@ -1,16 +1,33 @@
 <resources>
-    <string name="app_name">MapProject</string>
-    <string name="title_register">Registro</string>
-    <string name="title_map">Mapa</string>
-    <string name="title_login">Iniciar Sesion</string>
-    <string name="title_name">Nombre</string>
-    <string name="title_mail">Correo</string>
-    <string name="title_password">Contraseña</string>
-    <string name="title_chatbot">Chatbot</string>
-    <string name="title_repeat_password">Repetir Contraseña</string>
-    <string name="title_register_parking">Registrar Estacionamiento</string>
-    <string name="title_activity_main2">MainActivity2</string>
-    <string name="title_activity_main">MainActivity</string>
+    <string name="app_name">ProyectoMatematicaT</string>
+    <string name="modo_difilcutad">Elija el Modo de Dificultad:</string>
+    <string name="ejercicios_completados">¡¡Ejercicios Completados!!</string>
+    <string name="bienvenida">Hora de Aprender Matematicas</string>
+    <string name="empezar_ejercio">Empezar</string>
+    <string name="number_zero">0</string>
+    <string name="correct_answer">Respuesta correcta</string>
+    <string name="check_answer">Verificar Respuesta</string>
+    <string name="next_exercise">Siguiente Ejercicio</string>
+    <string name="exercise">2323 + 2323 = 2323</string>
+    <string name="informacion">A continuacion se mostrara una serie de ejercicios matematicos a resolver</string>
+    <string name="modo_facil">Facil</string>
+    <string name="modo_normal">Normal</string>
+    <string name="modo_dificil">Dificil</string>
+    <string name="numero_ejercicio">Ejercicio 0</string>
+    <string name="ejercicio">30-30=0</string>
+    <string name="number">2323</string>
+    <string name="mathematical_symbol">+/-</string>
+    <string name="answer_here">Respuesta</string>
+    <string name="siguiente_ejercicio">Siguiente Ejercicio</string>
+    <string name="imagen_correcto">Ejercicios Correctos</string>
+    <string name="imagen_incorrecto">Ejercicios Incorrectos</string>
+    <string name="sumas_restas">Sumas(+) y Restas(-)</string>
+    <string name="multiplicacion_division">Multiplicacion(x) y Division(/)</string>
+    <string name="operaciones_combinadas">Operaciones Combinadas</string>
+    <string name="ejercicios_correctos">Ejercicios Correctos: 30</string>
+    <string name="ejercicios_incorrectos">Ejercicios Incorrectos: 30</string>
+    <string name="reintentar">Reintentar</string>
+    <string name="menu_principal">Menu Principal</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
