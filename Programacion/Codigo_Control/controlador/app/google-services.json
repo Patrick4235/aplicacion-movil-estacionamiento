@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "179932648591",
+    "firebase_url": "https://controlador-bcc67-default-rtdb.firebaseio.com",
+    "project_id": "controlador-bcc67",
+    "storage_bucket": "controlador-bcc67.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:179932648591:android:44cb390dd59143abdf8cfa",
+        "android_client_info": {
+          "package_name": "com.example.control"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-3lDWfb0vSICs7wetEbHvDlwxWjpSnA8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:179932648591:android:5f1a011e01706449df8cfa",
+        "android_client_info": {
+          "package_name": "com.example.controlador"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-3lDWfb0vSICs7wetEbHvDlwxWjpSnA8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
